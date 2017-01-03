@@ -1,0 +1,45 @@
+# Site settings
+
+tabtitle: 'Made by a ZZar'
+title: 'DZZR'
+email: 'davidsimon.t@gmail.com'
+description: 'David Simon Tetruashvili is a computer science student who is just really board.'
+kickline: 'That one bored CompSci student.'
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://DavZZar.github.io" # the base hostname & protocol for your site
+twitter_username: DavidSimonTetru
+github_username:  DavZZar
+
+#menu tiem list
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: Work, url: '#work'}
+- {name: Clients, url: '#clients'}
+- {name: Contact, url: '#contact'}
+
+#Skill list
+
+skills:
+- {name: Communication, value: '9'}
+- {name: Organization, value: '7'}
+- {name: Learning, value: '10'}
+- {name: Teaching, value: '6'}
+- {name: Planning, value: '7'}
+- {name: Visual Design, value: '5'}
+- {name: UX Design, value: '8'}
+- {name: Programming, value: '6'}
+
+#Home-page settings
+
+avatar: 'face-img.jpg'
+
+background-image: 'hero-bg.jpg'
+logo-image: 'logo.svg'
+
+blurb: '<p><strong>Design is all about fucking relationships—the relationship of form and content,
+the relationship of elements, the relationship of designer and user.</strong> The details are
+not the details. They make the fucking design. Saul Bass on failure: Failure is built
+into creativity… the creative act involves this element of ‘newness’ and ‘experimentalism,’
+then one must expect and accept the fucking possibility of failure. Dedicate yourself to
+lifelong fucking learning. </p>'
