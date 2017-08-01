@@ -1,9 +1,3 @@
-h3
-  @extend %small-bold
-  color: $color-accent
-  text-align: center
-  padding: 100px 0 30px
-
 .face-lockup
   max-width: 780px
   +display(flex)
@@ -12,58 +6,81 @@ h3
   +justify-content(space-between)
 
   .face-img
-    background: center center
+    border-radius: 50%
+    background-size: cover
+    background-position: center
     background-image: url(../img/#{$avatar-path})
     +size(200px)
-    border-radius: 50%
     +order(3)
 
   [class^="icon-"]
     +size(100px)
-    background: $color-bg
+    background: $bgcolor
     border-radius: 50%
 
     path
-      fill: $color-accent-dark
+      fill: $accent
 
     &.icon-pencil
       +order(1)
-
     &.icon-mouse
       +order(2)
-
     &.icon-browser
       +order(4)
-
     &.icon-video
       +order(5)
 
+@media screen and (max-width: 650px)
+  .face-lockup
+    display: block
+    text-align: center
+
+    div
+      display: inline-block
+
+    .face-img
+      display: block
+      background:
+        position: center center
+        repeat: no-repeat
+      margin: 0 auto 30px
+
+    [class^="icon-"]
+      margin: 10px 9%
+
+
+
+
 .blurb
   max-width: 620px
-  padding: 0 15px
+  padding: 0 20px
   margin: 50px auto
   font-size: 24px
   text-align: center
   font-weight: 300
 
-.skills-lockup
-  max-width: 700px
+
+
+.skill-lockup
+  max-width: 540px
   margin: 100px auto
   color: #999
   +clearfix
 
+
   .skill-unit
-    width: 350px
+    width: 270px
     float: left
 
   .skill-icons
     font-size: 0
-    margin: 2px 0 30px
+    margin: 3px 0 30px
+
     span
       display: inline-block
       +size(14px)
-      background: $color-accent
-      margin-right: 5px
+      background-color: $accent
+      margin-right: 8px
       border-radius: 50%
 
       &:after
@@ -78,30 +95,16 @@ h3
       &.skill-#{$i} span:nth-child(n+#{$i+1})
         @extend %skill-color
 
+
 %skill-color
-  background: $color-bg
-
-@media screen and (max-width: 715px)
-  .skills-lockup
-    width: 270px
+  background: $bgcolor
 
 
-@media screen and (max-width: 650px)
-  .face-lockup
-    display: block
-    text-align: center
 
-    [class^="icon-"]
-      margin: 10px
 
-    div
-      display: inline-block
-    .face-img
-      display: block
-      background-position: center center
-      background-repeat: no-repeat
-      margin: 0 auto
-      margin-bottom: 30px
+@media screen and (max-width: 541px)
+  .skill-lockup
+    width: 220px
 
-  .blurb
-    text-align: justify
+    .skill-unit
+      width: 220px

@@ -185,7 +185,7 @@ td,
 th {
   padding: 0; }
 
-header nav a, header .kicker, footer .lockup .content-wrap a, h3 {
+header nav a, header .kicker, footer .lockup .content-wrap a {
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase; }
@@ -293,11 +293,6 @@ footer {
         footer .lockup .content-wrap a:hover {
           color: rgba(0, 0, 0, 0.7); }
 
-h3 {
-  color: #e1c184;
-  text-align: center;
-  padding: 100px 0 30px; }
-
 .face-lockup {
   max-width: 780px;
   display: -webkit-box;
@@ -327,11 +322,12 @@ h3 {
   justify-content: space-between;
   -ms-flex-pack: justify; }
   .face-lockup .face-img {
-    background: center center;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
     background-image: url(../img/face-img.jpg);
     height: 200px;
     width: 200px;
-    border-radius: 50%;
     -webkit-box-ordinal-group: 3;
     -moz-box-ordinal-group: 3;
     box-ordinal-group: 3;
@@ -342,10 +338,10 @@ h3 {
   .face-lockup [class^="icon-"] {
     height: 100px;
     width: 100px;
-    background: #e5eaee;
+    background: "#e5eaee";
     border-radius: 50%; }
     .face-lockup [class^="icon-"] path {
-      fill: #c99065; }
+      fill: "#c99065"; }
     .face-lockup [class^="icon-"].icon-pencil {
       -webkit-box-ordinal-group: 1;
       -moz-box-ordinal-group: 1;
@@ -379,36 +375,49 @@ h3 {
       order: 5;
       -ms-flex-order: 5; }
 
+@media screen and (max-width: 650px) {
+  .face-lockup {
+    display: block;
+    text-align: center; }
+    .face-lockup div {
+      display: inline-block; }
+    .face-lockup .face-img {
+      display: block;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 auto 30px; }
+    .face-lockup [class^="icon-"] {
+      margin: 10px 9%; } }
 .blurb {
   max-width: 620px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 50px auto;
   font-size: 24px;
   text-align: center;
   font-weight: 300; }
 
-.skills-lockup {
-  max-width: 700px;
+.skill-lockup {
+  max-width: 540px;
   margin: 100px auto;
   color: #999; }
-  .skills-lockup::after {
+  .skill-lockup::after {
     clear: both;
     content: "";
     display: table; }
-  .skills-lockup .skill-unit {
-    width: 350px;
+  .skill-lockup .skill-unit {
+    width: 270px;
     float: left; }
-  .skills-lockup .skill-icons {
+  .skill-lockup .skill-icons {
     font-size: 0;
-    margin: 2px 0 30px; }
-    .skills-lockup .skill-icons span {
+    margin: 3px 0 30px; }
+    .skill-lockup .skill-icons span {
       display: inline-block;
       height: 14px;
       width: 14px;
-      background: #e1c184;
-      margin-right: 5px;
+      background-color: "#c99065";
+      margin-right: 8px;
       border-radius: 50%; }
-      .skills-lockup .skill-icons span:after {
+      .skill-lockup .skill-icons span:after {
         content: "";
         display: block;
         height: 10px;
@@ -417,26 +426,11 @@ h3 {
         border-radius: 50%;
         margin: 2px; }
 
-.skills-lockup .skill-icons.skill-1 span:nth-child(n+2), .skills-lockup .skill-icons.skill-2 span:nth-child(n+3), .skills-lockup .skill-icons.skill-3 span:nth-child(n+4), .skills-lockup .skill-icons.skill-4 span:nth-child(n+5), .skills-lockup .skill-icons.skill-5 span:nth-child(n+6), .skills-lockup .skill-icons.skill-6 span:nth-child(n+7), .skills-lockup .skill-icons.skill-7 span:nth-child(n+8), .skills-lockup .skill-icons.skill-8 span:nth-child(n+9), .skills-lockup .skill-icons.skill-9 span:nth-child(n+10), .skills-lockup .skill-icons.skill-10 span:nth-child(n+11) {
-  background: #e5eaee; }
+.skill-lockup .skill-icons.skill-1 span:nth-child(n+2), .skill-lockup .skill-icons.skill-2 span:nth-child(n+3), .skill-lockup .skill-icons.skill-3 span:nth-child(n+4), .skill-lockup .skill-icons.skill-4 span:nth-child(n+5), .skill-lockup .skill-icons.skill-5 span:nth-child(n+6), .skill-lockup .skill-icons.skill-6 span:nth-child(n+7), .skill-lockup .skill-icons.skill-7 span:nth-child(n+8), .skill-lockup .skill-icons.skill-8 span:nth-child(n+9), .skill-lockup .skill-icons.skill-9 span:nth-child(n+10), .skill-lockup .skill-icons.skill-10 span:nth-child(n+11) {
+  background: "#e5eaee"; }
 
-@media screen and (max-width: 715px) {
-  .skills-lockup {
-    width: 270px; } }
-@media screen and (max-width: 650px) {
-  .face-lockup {
-    display: block;
-    text-align: center; }
-    .face-lockup [class^="icon-"] {
-      margin: 10px; }
-    .face-lockup div {
-      display: inline-block; }
-    .face-lockup .face-img {
-      display: block;
-      background-position: center center;
-      background-repeat: no-repeat;
-      margin: 0 auto;
-      margin-bottom: 30px; }
-
-  .blurb {
-    text-align: justify; } }
+@media screen and (max-width: 541px) {
+  .skill-lockup {
+    width: 220px; }
+    .skill-lockup .skill-unit {
+      width: 220px; } }
